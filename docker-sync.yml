@@ -1,6 +1,6 @@
 version: '2'
 syncs:
-  app-sync:
+  app-sync-code-micro:
     src: '/var/www/html/codeedu/code-micro-video'
     sync_excludes: [
       ".idea",
