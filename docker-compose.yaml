@@ -19,10 +19,9 @@ services:
         container_name: nginx
         restart: always
         tty: true
+        command: ["/bin/sh","-c","mkdir -p /var/www/public; touch /var/www/public/index.php; nginx -g 'daemon off;'"]
         ports:
             - "8000:80"
-        volumes:
-            - app-sync-code-micro:/var/www
         networks:
             - app-network
         depends_on:
